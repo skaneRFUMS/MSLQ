@@ -1,0 +1,127 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.header-row {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    display: flex;
+    padding: 10px;
+}
+
+.page-number {
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px 5px;
+    padding: 5px 10px;
+}
+
+.page-number.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.question {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.question-col {
+    flex: 1;
+    font-weight: bold;
+}
+
+.question-row {
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    padding: 10px;
+}
+
+.question-table {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.question-text {
+    flex: 1;
+}
+
+#page-indicator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.radio-group {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 350px;
+}
+
+.radio-label {
+    align-items: flex-end;
+    display: flex;
+    height: 40px;
+}
+
+.radio-group label {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: center;
+    width: 14%;
+}
+
+.scale-col {
+    font-weight: bold;
+    text-align: center;
+    width: 350px;
+}
+
+.scale-numbers {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+@media (max-width: 576px) {
+    .radio-group {
+        flex-wrap: nowrap;
+    }
+    
+    .radio-group label {
+        margin-bottom: 10px;
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-row,
+    .question-row {
+        flex-direction: column;
+    }
+    
+    .radio-group,
+    .scale-col {
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .radio-group label {
+        margin-bottom: 10px;
+        width: 25%;
+    }
+}
