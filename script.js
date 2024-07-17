@@ -20,7 +20,7 @@ function renderQuestions() {
                 <div class="radio-group">
                     ${[1, 2, 3, 4, 5, 6, 7].map(value => `
                         <label>
-                            <input type="radio" name="q${i}" value="${value}" ${answers[i] === value ? 'checked' : ''}>
+                            <input type="radio" name="q${i}" value="${value}" ${answers[i] === value ? 'checked' : ''} onchange="saveAnswers(); setSubmitVisibility();">
                         </label>
                     `).join('')}
                 </div>
@@ -40,6 +40,9 @@ function updateNavigation() {
 	} else {
 		$('#next').removeClass('d-none');
 	}
+}
+
+function setSubmitVisibility() {
 	if (answers.filter(x => x == 0).length) {
 		$('#submit').addClass('d-none');
 	} else {
