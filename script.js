@@ -6,6 +6,11 @@ const totalPages = Math.ceil(questions.length / questionsPerPage);
 $(document).ready(function() {
     renderQuestions();
 
+	// Prompt the user before leaving the page
+	window.addEventListener("beforeunload", function (event) {
+		event.preventDefault();
+		event.returnValue = '';
+	});
 });
 
 function renderQuestions() {
